@@ -2,11 +2,18 @@
 TODO: fill in the walk through
 
 #### Running this example
+
+```
 docker-compose up
+```
 You should see the ingested, parsed, and normalized logs exported to STDOUT.
-Tearing down this example
+
+### Tearing down this example
+```
 docker-compose down
-Influences / Credit
+```
+### Influences / Credit
+
 The code in this demo was heavily influenced from the example application in https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/examples/kubernetes which carries the following license.
 
 ```
