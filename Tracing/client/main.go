@@ -55,6 +55,7 @@ func initTracer(ctx context.Context, otelAgentAddr string) func(context.Context)
 		otlptracegrpc.WithInsecure(),
 		otlptracegrpc.WithEndpoint(otelAgentAddr),
 		otlptracegrpc.WithDialOption(grpc.WithBlock()))
+	// Creates a new trace exporter that sends spans to the OTel agent.
 	traceExp, err := otlptrace.New(ctx, traceClient)
 	handleErr(err, "Failed to create the collector trace exporter")
 
